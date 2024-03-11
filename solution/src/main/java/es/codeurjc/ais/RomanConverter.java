@@ -4,8 +4,8 @@ public class RomanConverter {
     
     public String convert(int number){
         
-        String[] letters = {"I", "X"};
-        int[] values = {1, 10};
+        String[] letters = {"X", "I"};
+        int[] values = {10, 1};
 
         String roman = "";
 
@@ -17,7 +17,7 @@ public class RomanConverter {
                 rest -= values[i];
             }
         }
-        
+
         return roman;
     }
 }
