@@ -18,12 +18,12 @@ public class RomanConverterTest {
         "XI, 11",
         "IX, 9",
         "V, 5",
-        // "IV, 4",
-        // "VI, 6",
-        // "VII, 7",
-        // "VIII, 8",
-        // "L, 50",
-        // "XL, 40",
+        "IV, 4",
+        "VI, 6",
+        "VII, 7",
+        "VIII, 8",
+        "L, 50",
+        "XL, 40",
         // ...
     })
     public void testRoman(String roman, int number) {
