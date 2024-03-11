@@ -2,14 +2,10 @@ package es.codeurjc.ais;
 
 public class RomanConverter {
 
-    private static String[] LETTERS = {"X", "I"};
-    private static int[] VALUES = { 10, 1 };
+    private static String[] LETTERS = {"X", "IX", "I"};
+    private static int[] VALUES = { 10, 9, 1 };
     
     public String convert(int number){
-
-        if(number==9){
-            return "IX";
-        }
         
         String roman = "";
 
