@@ -57,5 +57,11 @@ public class RomanConverterTest {
         );
     }    
     // 4000 is not allowed
+    @Test
+    public void testRomanGreaterThat3999() {
+        assertThrows(IllegalArgumentException.class, 
+            () -> converter.convert(4000)
+        );
+    }
 
 }

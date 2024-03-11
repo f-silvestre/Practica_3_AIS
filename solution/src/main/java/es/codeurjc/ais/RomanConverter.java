@@ -9,6 +9,8 @@ public class RomanConverter {
 
         if (number <= 0) {
             throw new IllegalArgumentException("Number must be greater than zero");
+        }else if (number >= 4000) {
+            throw new IllegalArgumentException("Number must be less than 4000");
         }
         
         String roman = "";
