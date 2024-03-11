@@ -1,7 +1,10 @@
 package es.codeurjc.ais;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -32,6 +35,14 @@ public class RomanConverterTest {
     }
     
     // Zero is not allowed
+    @Test
+    @DisplayName("Zero is not allowed")
+    public void testRomanZero() {
+        RomanConverter converter = new RomanConverter();
+        assertThrows(IllegalArgumentException.class, 
+            () -> converter.convert(0)
+        );
+    }
     // Negative numbers are not allowed
     // 4000 is not allowed
 
