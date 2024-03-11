@@ -3,12 +3,12 @@ package es.codeurjc.ais;
 public class RomanConverter {
     
     public String convert(int number){
-        if(number == 3){
-            return "III";
+        String roman = "";
+
+        for(int i = number; i < number; i++){
+            roman += "I";
         }
-        if (number == 2) {
-            return "II";
-        }
-        return "I";
+        
+        return roman;
     }
 }
