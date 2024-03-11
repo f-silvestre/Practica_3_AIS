@@ -7,8 +7,8 @@ public class RomanConverter {
     
     public String convert(int number){
 
-        if (number == 0) {
-            throw new IllegalArgumentException("Number can't be zero");
+        if (number <= 0) {
+            throw new IllegalArgumentException("Number must be greater than zero");
         }
         
         String roman = "";

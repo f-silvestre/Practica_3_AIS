@@ -44,6 +44,13 @@ public class RomanConverterTest {
         );
     }
     // Negative numbers are not allowed
+    @Test
+    public void testRomanNegative() {
+        RomanConverter converter = new RomanConverter();
+        assertThrows(IllegalArgumentException.class, 
+            () -> converter.convert(-1)
+        );
+    }    
     // 4000 is not allowed
 
 }
