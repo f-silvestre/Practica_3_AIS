@@ -6,6 +6,10 @@ public class RomanConverter {
     private static int[] VALUES = { 10, 9, 1 };
     
     public String convert(int number){
+
+        if(number == 5){
+            return "V";
+        }
         
         String roman = "";
 

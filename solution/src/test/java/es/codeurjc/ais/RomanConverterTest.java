@@ -17,7 +17,7 @@ public class RomanConverterTest {
         "XXX, 30",
         "XI, 11",
         "IX, 9",
-        // "V, 5",
+        "V, 5",
         // "IV, 4",
         // "VI, 6",
         // "VII, 7",
