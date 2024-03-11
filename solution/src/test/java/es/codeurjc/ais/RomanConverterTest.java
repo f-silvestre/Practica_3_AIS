@@ -3,12 +3,20 @@ package es.codeurjc.ais;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 public class RomanConverterTest {
+
+    private RomanConverter converter;
+
+    @BeforeEach
+    public void setup(){
+        this.converter = new RomanConverter();
+    }
 
     @ParameterizedTest(name = "{0} should be {1}")
     @CsvSource({
@@ -29,8 +37,7 @@ public class RomanConverterTest {
         "XL, 40",
         // ...
     })
-    public void testRoman(String roman, int number) {
-        RomanConverter converter = new RomanConverter();
+    public void testRoman(String roman, int number) {       
         assertEquals(roman, converter.convert(number));
     }
     
@@ -38,7 +45,6 @@ public class RomanConverterTest {
     @Test
     @DisplayName("Zero is not allowed")
     public void testRomanZero() {
-        RomanConverter converter = new RomanConverter();
         assertThrows(IllegalArgumentException.class, 
             () -> converter.convert(0)
         );
@@ -46,7 +52,6 @@ public class RomanConverterTest {
     // Negative numbers are not allowed
     @Test
     public void testRomanNegative() {
-        RomanConverter converter = new RomanConverter();
         assertThrows(IllegalArgumentException.class, 
             () -> converter.convert(-1)
         );
