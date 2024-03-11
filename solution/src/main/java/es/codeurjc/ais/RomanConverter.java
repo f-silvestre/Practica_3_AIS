@@ -5,18 +5,16 @@ public class RomanConverter {
     public String convert(int number){
         String roman = "";
 
-        if(number == 11){
-            return "XI";
+        int rest = number;
+
+        while(rest >= 10){
+            roman += "X";
+            rest -= 10;
         }
 
-        if(number >= 10){
-            for(int i = 0; i < number/10; i++){
-                roman += "X";
-            }
-        }else{
-            for(int i = 0; i < number; i++){
-                roman += "I";
-            }
+        while(rest >= 1){
+            roman += "I";
+            rest -= 1;
         }
 
         return roman;
