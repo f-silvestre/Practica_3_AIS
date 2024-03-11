@@ -12,7 +12,7 @@ public class RomanConverterTest {
         "I, 1",
         "II, 2",
         "III, 3",
-        // "X, 10",
+        "X, 10",
         // "XX, 20",
         // "XXX, 30",
         // "XI, 11",
