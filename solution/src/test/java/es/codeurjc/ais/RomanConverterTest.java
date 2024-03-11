@@ -15,6 +15,12 @@ public class RomanConverterTest {
         assertEquals("I", converter.convert(1));
     }
     // II
+    @Test
+    @DisplayName("Convert 2 to II")
+    public void testII() {
+        RomanConverter converter = new RomanConverter();
+        assertEquals("II", converter.convert(2));
+    }
     // III
     // X
     // XX
