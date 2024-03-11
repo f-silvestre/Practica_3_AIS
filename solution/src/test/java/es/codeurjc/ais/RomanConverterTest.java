@@ -47,21 +47,21 @@ public class RomanConverterTest {
     public void testRomanZero() {
         assertThrows(IllegalArgumentException.class, 
             () -> converter.convert(0)
-        );
+        ).getMessage().equals("Number must be greater than zero");
     }
     // Negative numbers are not allowed
     @Test
     public void testRomanNegative() {
         assertThrows(IllegalArgumentException.class, 
             () -> converter.convert(-1)
-        );
+        ).getMessage().equals("Number must be greater than zero");
     }    
     // 4000 is not allowed
     @Test
     public void testRomanGreaterThat3999() {
         assertThrows(IllegalArgumentException.class, 
             () -> converter.convert(4000)
-        );
+        ).getMessage().equals("Number must be less than 4000");
     }
 
 }
