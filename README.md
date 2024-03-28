@@ -15,11 +15,15 @@ public void testI() {
 }
 ```
 
-**EJ1. Captura de que el test NO PASA**
+**EJ1. Mensaje del test añadido que NO PASA**
 
-![No pasa](capturas/Ejemplo_1_NO_PASA.png "No pasa")
+```log
+org.opentest4j.AssertionFailedError: expected: [I] but was: []
+```
 
 **EJ1. Código mínimo para que el test pase**
+
+Describe brevemente el código mínimo implementado
 
 ```java
 public String convert(int number){
@@ -27,21 +31,21 @@ public String convert(int number){
 }
 ```
 
-**EJ1. Captura de que el test PASA**
+**EJ1. Captura de que TODOS los test PASAN**
 
 ![Pasa](capturas/Ejemplo_1_PASA.png "Pasa")
 
 **EJ1. Refactorización**
 > [BORRAR]  Solo si se considera necesario
 
-Si queréis justificar vuestra refactorización para añadir un comentario, lo podéis hacer reemplazando este texto.
+Justificar vuestra refactorización aquí.
 
 ```java
 public String convert(int number){
     return "I"; // Imaginemos que hemos refactorizado aquí
 }
 ```
-**EJ1. Captura de que el test PASA tras la refactorización**
+**EJ1. Captura de que TODOS los tests PASAN tras la refactorización**
 > [BORRAR]  Solo si se ha realizado una refactorización
 
 ![Pasa](capturas/Ejemplo_1_PASA.png "Pasa")
