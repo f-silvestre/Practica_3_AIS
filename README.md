@@ -1,10 +1,10 @@
-# RomanNumbersKata - Ejemplo de memoria para la práctica de TDD
+# Práctica 3 - Desarrollo guiado por pruebas
 
 Nombre de los alumnos: Sergio Reguero Elez y Fernando Silvestre Menéndez
 
 ### Ejemplo 1
 
-**INPUT y OUTPUT**: 1 -> "1"
+**INPUT y OUTPUT**: "1" -> 1
 
 **EJ1. Código de test**
 ```java
@@ -52,7 +52,7 @@ public int parser(String string) {
 
 ### Ejemplo 2
 
-**INPUT y OUTPUT**: 2 -> "2"
+**INPUT y OUTPUT**: "2" -> 2
 
 **EJ2. Código de test**
 ```java
@@ -104,7 +104,7 @@ public int parser(String string) {
 
 ### Ejemplo 3
 
-**INPUT y OUTPUT**: 3 -> "3"
+**INPUT y OUTPUT**: "3" -> 3
 
 **EJ3. Código de test**
 ```java
@@ -149,3 +149,53 @@ public int parser(String string) {
 **EJ3. Captura de que TODOS los tests PASAN tras la refactorización**
 
 ![Pasa](capturas/Ej_3_pasa_refact.jpg "Pasa")
+
+
+
+### Ejemplo 4
+
+**INPUT y OUTPUT**: "1 + 1" -> 2
+
+**EJ4. Código de test**
+```java
+@Test
+	public void receives_two_equal_numbers_returns_addition(){
+		assertEquals(2,calculatorParser.parser("1 + 1"));
+}
+```
+
+**EJ4. Mensaje del test añadido que NO PASA**
+
+```log
+java.lang.NumberFormatException: For input string: "1 + 1"
+
+```
+
+**EJ4. Código mínimo para que el test pase**
+
+Si la longitud es mayo a 1, devolver 2.
+
+```java
+public int parser(String string) {
+		if(string.length()>1) return 2;
+		return Integer.parseInt(string);
+}
+```
+
+**EJ4. Captura de que TODOS los test PASAN**
+
+![Pasa](capturas/Ej_4_pasa.jpg "Pasa")
+
+**EJ4. Refactorización**
+
+Compruebo que la cadena es la esperada.
+
+```java
+public int parser(String string) {
+		if(string.equals("1 + 1")) return 2;
+		return Integer.parseInt(string);
+}
+```
+**EJ4. Captura de que TODOS los tests PASAN tras la refactorización**
+
+![Pasa](capturas/Ej_4_pasa_refact.jpg "Pasa")

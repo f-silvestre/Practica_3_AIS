@@ -33,13 +33,18 @@ public class CalculatorParserTest{
     public void receives_number_returns_same_number_ej_3(){
 		assertEquals(3,calculatorParser.parser("3"));
 	}
-	/*
 	
 	@Test
-	public void receives_two_numbers_returns_addition(){
-		assertEquals(calculatorParser.parser("1 + 1"),2);
-		assertEquals(calculatorParser.parser("2 + 3"),5);
+	public void receives_two_equal_numbers_returns_addition(){
+		assertEquals(2,calculatorParser.parser("1 + 1"));
 	}
+	/*
+	@Test
+	public void diferent_numbers_returns_addition(){
+		
+		assertEquals(5,calculatorParser.parser("2 + 3"));
+	}
+	
 	
 	@Test
 	public void receives_three_numbers_returns_addition() {
