@@ -20,17 +20,20 @@ public class CalculatorParserTest{
 	
 	@Test
     public void receives_number_returns_same_number_ej_1(){
-		assertEquals(calculatorParser.parser("1"),1);
+		assertEquals(1,calculatorParser.parser("1"));
 	}
-	/*	
+		
 	@Test
     public void receives_number_returns_same_number_ej_2(){
-		assertEquals(calculatorParser.parser("2"),2);
+		assertEquals(2,calculatorParser.parser("2"));
 	}
+	
+	
 	@Test
     public void receives_number_returns_same_number_ej_3(){
-		assertEquals(calculatorParser.parser("3"),3);
+		assertEquals(3,calculatorParser.parser("3"));
 	}
+	/*
 	
 	@Test
 	public void receives_two_numbers_returns_addition(){
